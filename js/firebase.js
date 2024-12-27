@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyDxscHMK0mmFGjSA9zkM47L61L-JtpAC3I",
-  authDomain: "passionbreww.firebaseapp.com",
-  databaseURL: "https://passionbreww-default-rtdb.firebaseio.com",
-  projectId: "passionbreww",
-  storageBucket: "passionbreww.firebasestorage.app",
-  messagingSenderId: "812449549092",
-  appId: "1:812449549092:web:7f6a2a06c0cfaf3dcbc1b1"
+  apiKey: "AIzaSyDjerI97WXUv2Xyx0yOnPFcLQRfDHqE-Lc",
+  authDomain: "passbask.firebaseapp.com",
+  databaseURL: "https://passbask-default-rtdb.firebaseio.com",
+  projectId: "passbask",
+  storageBucket: "passbask.firebasestorage.app",
+  messagingSenderId: "524743933846",
+  appId: "1:524743933846:web:413f3069aa399ab90527b7"
 };
 firebase.initializeApp(firebaseConfig);
 const appCheck = firebase.appCheck();
