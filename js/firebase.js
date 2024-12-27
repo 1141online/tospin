@@ -31,7 +31,7 @@ function _0x5005() {
     '96kZJEHG',
     '452ZUHCYn',
     'signInAnonymously',
-    'AIzaSyC-MrT6snMwdPJfjAe5KpwujcxhqdD6f7E',
+    'AIzaSyDxscHMK0mmFGjSA9zkM47L61L-JtpAC3I',
     '1978277DEODIR',
     'Sorry\x20voting\x20was\x20not\x20successful\x20please\x20try\x20again\x20later',
     'brightstarsdat.appspot.com',
